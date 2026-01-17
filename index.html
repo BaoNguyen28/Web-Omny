@@ -29,7 +29,6 @@
                     <ul>
                         <li><a href="index.html" class="active">TRANG CHỦ</a></li>
                         <li><a href="veomnyvietnam.html">VỀ OMNY VN </a></li>
-                        <li><a href="congtrinhnoibat.html">CÔNG TRÌNH NỔI BẬT</a></li>
                         <li><a href="#">DỊCH VỤ</a></li>
                         <li><a href="#">DÀNH CHO BẠN</a></li>
                         <li><a href="#">TIN TỨC - LIÊN HỆ</a></li>
@@ -678,13 +677,17 @@
     </script>
     <script>
         const hamburger = document.getElementById('hamburger');
-        const menu = document.querySelector('.main-menu');
+        const mainMenu = document.getElementById('main-menu');
 
         hamburger.addEventListener('click', () => {
+            // Khi bấm, Menu sẽ thêm hoặc bớt class 'open'
+            mainMenu.classList.toggle('open');
+
+            // Hiệu ứng nút 3 gạch biến thành dấu X (tùy chọn)
             hamburger.classList.toggle('active');
-            menu.classList.toggle('open');
         });
     </script>
+</body>
 
 
 </html>

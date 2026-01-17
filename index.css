@@ -23,7 +23,6 @@
 
 
 
-/* Nút tìm kiếm */
 /* Nút tìm kiếm - Bản đặc trị lệch icon */
 .search-icon {
     display: flex !important;
@@ -480,7 +479,7 @@
     color: #fff;
     border: none;
     padding: 12px 40px;
-    margin: 20px;
+    margin: 100px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
