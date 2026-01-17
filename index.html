@@ -19,11 +19,12 @@
                 <div class="logo">
                     <img src="img/logo-omy-white.png" alt="Logo">
                 </div>
-                <button class="hamburger" id="hamburger">
+                <div class="hamburger" id="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
-                </button>
+                </div>
+
                 <nav class="main-menu" id="main-menu">
                     <ul>
                         <li><a href="index.html" class="active">TRANG CHỦ</a></li>
@@ -677,17 +678,13 @@
     </script>
     <script>
         const hamburger = document.getElementById('hamburger');
-        const mainMenu = document.getElementById('main-menu');
+        const menu = document.querySelector('.main-menu');
 
         hamburger.addEventListener('click', () => {
-            // Khi bấm, Menu sẽ thêm hoặc bớt class 'open'
-            mainMenu.classList.toggle('open');
-
-            // Hiệu ứng nút 3 gạch biến thành dấu X (tùy chọn)
             hamburger.classList.toggle('active');
+            menu.classList.toggle('open');
         });
     </script>
-</body>
 
 
 </html>

@@ -1646,37 +1646,92 @@ html {
     }
 }
 
-@media (max-width: 768px) {
-
-  /* span gốc */
-  .hamburger span {
-    background: #000 !important;
-    border-color: #000 !important;
-  }
-
-  /* nếu hamburger dùng pseudo element */
-  .hamburger span::before,
-  .hamburger span::after {
-    background: #000 !important;
-  }
-
-  /* trường hợp dùng border thay vì background */
-  .hamburger span {
-    border-top: 2px solid #000 !important;
-    border-bottom: 2px solid #000 !important;
-  }
-
-  /* khi active thành dấu X */
-  .hamburger.active span,
-  .hamburger.active span::before,
-  .hamburger.active span::after {
-    background: #000 !important;
-    border-color: #000 !important;
-  }
+/* ===== HAMBURGER 3 GẠCH ===== */
+.hamburger {
+    width: 28px;
+    height: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
 }
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    /* ĐEN */
+    border-radius: 2px;
+    transition: all 0.35s ease;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Khi menu mở */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
 @media (max-width: 768px) {
 
-  .header-wrapper {
-    background: #fff !important;
-  }
+    .why-image-center {
+        display: block;
+        order: -1;
+        /* Đưa ảnh lên đầu */
+        margin-bottom: 1.5rem;
+    }
+
+    .why-image-center img {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* ===== FIX ICON OVERLAY BỊ CẮT ===== */
+
+/* CHỈ cho phép overlay tràn ra */
+.portfolio-item {
+    overflow: visible;
+    /* MỞ KHÓA */
+}
+
+/* Nhưng giữ ảnh không tràn */
+.portfolio-image {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        height: auto;
+        min-height: 55vh;
+        /* vừa đẹp */
+    }
+
+    .swiper,
+    .swiper-slide {
+        height: auto;
+    }
+
+    .swiper-slide img {
+        height: 55vh;
+        object-fit: cover;
+    }
 }
