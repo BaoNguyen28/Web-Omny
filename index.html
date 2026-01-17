@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giao diện OMNY Vietnam</title>
+    <title>Omny Việt Nam</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -19,7 +19,12 @@
                 <div class="logo">
                     <img src="img/logo-omy-white.png" alt="Logo">
                 </div>
-                <nav class="main-menu">
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="main-menu" id="main-menu">
                     <ul>
                         <li><a href="index.html" class="active">TRANG CHỦ</a></li>
                         <li><a href="veomnyvietnam.html">VỀ OMNY VN </a></li>
@@ -668,6 +673,18 @@
 
             closeBtn.onclick = closeSearch;
             overlay.onclick = (e) => { if (e.target === overlay) closeSearch(); };
+        });
+    </script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mainMenu = document.getElementById('main-menu');
+
+        hamburger.addEventListener('click', () => {
+            // Khi bấm, Menu sẽ thêm hoặc bớt class 'open'
+            mainMenu.classList.toggle('open');
+
+            // Hiệu ứng nút 3 gạch biến thành dấu X (tùy chọn)
+            hamburger.classList.toggle('active');
         });
     </script>
 </body>
