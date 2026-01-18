@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var scrolled = window.scrollY || document.documentElement.scrollTop;
             var percent = (scrolled / totalHeight) * 100;
 
-            if (percent > 30) {
+            if (percent > 20) {
                 backToTop.classList.add('show');
             } else {
                 backToTop.classList.remove('show');
